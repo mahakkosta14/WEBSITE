@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Your Cart</h1>
+    </header>
+    <main>
+        <div id="cart-items"></div>
+    </main>
+    <footer>
+        <!-- Footer content -->
+    </footer>
+    <script>
+        async function loadCartItems() {
+            const user_id = 1; // Assuming a logged-in user with ID 1
+            const response = await fetch(`/cart/${user_id}`);
+            const cartItems = await response.json();
+            const cartContainer = document.getElementById('cart-items');
+            cartContainer.innerHTML = '';
+
+            cartItems.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.className = 'cart-item';
+                itemElement.innerHTML = `
+                    <p>Product ID: ${item.product_id}</p>
+                    <p>Quantity: ${item.quantity}</p>
+                `;
+                cartContainer.appendChild(itemElement);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', loadCartItems);
+    </script>
+</body>
+</html>

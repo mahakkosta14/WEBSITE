@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "name":" Wall Painting",
+        "price": 200,
+        "image": "/light1 (1).webp"
+    },
+    {
+        "id": 2,
+        "name":" Painting colours",
+        "price": 250,
+        "image": "/light2.webp"
+    },
+    {
+        "id": 3,
+        "name":" Aqua marine painting",
+        "price": 290,
+        "image": "/light3.webp"
+    },
+    {
+        "id": 4,
+        "name":" Floura painting",
+        "price": 200,
+        "image": "/light4.webp"
+    },
+    {
+        "id": 5,
+        "name":" Cripton wall art",
+        "price": 300,
+        "image": "/light5.webp"
+    },
+    {
+        "id": 6,
+        "name":"Asthetic icon wall art",
+        "price": 200,
+        "image": "/light6.webp"
+    },
+    {
+        "id": 7,
+        "name":" Asthetic icon wall art",
+        "price": 200,
+        "image": "/light2.webp"
+    },
+    {
+        "id": 8,
+        "name":"Cripton wall art",
+        "price": 200,
+        "image": "/light3.webp"
+    }
+    
+
+]

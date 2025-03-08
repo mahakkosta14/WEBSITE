@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "name":" Candles Decor",
+        "price": 200,
+        "image": "/candles.jpg"
+    },
+    {
+        "id": 2,
+        "name":" Beautiful Decor",
+        "price": 250,
+        "image": "/bath1.jpg"
+    },
+    {
+        "id": 3,
+        "name":" Decor Furniture",
+        "price": 290,
+        "image": "/FURNITURE 3.jpg"
+    },
+    {
+        "id": 4,
+        "name":" Floura painting",
+        "price": 200,
+        "image": "/books4.jpg"
+    },
+    {
+        "id": 5,
+        "name":" Cripton wall art",
+        "price": 300,
+        "image": "/books5.jpg"
+    },
+    {
+        "id": 6,
+        "name":"Gifting Decor",
+        "price": 200,
+        "image": "/furniture2.jpg"
+    },
+    {
+        "id": 7,
+        "name":" Human Figure Decor",
+        "price": 200,
+        "image": "/human 1.jpg"
+    },
+    {
+        "id": 8,
+        "name":"kitchen decor",
+        "price": 200,
+        "image": "/kitchen8.jpg"
+    }
+    
+
+]

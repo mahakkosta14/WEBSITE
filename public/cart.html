@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="/main.html"><div class="outline">
+                <i class="fa-solid fa-house fa-2x"></i><h3> <pre> Home</pre></h3>
+            </div></a>
+            <a href="/favorites.html"><div class="outline">
+                <i class="fa-solid fa-heart fa-2x"></i><h3> <pre> Favorite </pre></h3>
+            </div></a>
+            <a href="/lo.html"><div class="outline">
+                <i class="fa-solid fa-user fa-2x" ></i><h3><pre> Profile </pre></h3>
+            </div></a>
+        </div>
+    </header>
+    <main>
+        <h1>Your Cart</h1>
+        <div id="cart-items" class="items-container"></div>
+    </main>
+    <footer>
+        <hr>
+        <p> Love What You Wear.....&hearts;</p> <hr>
+        <div id="foot">
+            <b>Welcome to Miraj Collection</b><br>
+            Social Responsibility<br>
+            Sustainability<br>
+            Our Factory<br>
+            About Us <br>
+            Newsroom
+        </div>
+    
+        <div id="foot">
+            <b>Contact Us</b><br>
+            Support: support@miraj.com <br>
+            Legal: legal.india@miraj.com <br>
+             Press: press.india@miraj.com
+        </div>
+    
+        <div id="foot">
+            <b>Help</b><br>
+            Paymeant Method<br>
+            Shipping & Delivery<br>
+            Return Policy
+        </div>
+    
+        <div id="foot">
+            <b>Policies</b><br>
+            Terms & Conditions<br>
+            Privacy Policy
+        </div>     
+        <hr>
+    </footer>
+    <script>
+        async function loadCartItems() {
+            const user_id = 1; // Assuming a logged-in user with ID 1
+
+            // Fetch cart items
+            const cartResponse = await fetch(`/cart/${user_id}`);
+            const cartItems = await cartResponse.json();
+            const cartContainer = document.getElementById('cart-items');
+            cartContainer.innerHTML = ''; // Clear existing items
+
+            cartItems.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.className = 'cart-item';
+                itemElement.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" class="product-image"/>
+                    <div class="product-details">
+                        <h2>${item.name}</h2>
+                        <p>${item.description}</p>
+                        <p>Price: $${item.price}</p>
+                        <p>Quantity: ${item.quantity}</p>
+                    </div>
+                `;
+                cartContainer.appendChild(itemElement);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', loadCartItems);
+    </script>
+</body>
+</html>
